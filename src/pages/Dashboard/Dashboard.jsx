@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Home.css'
+import './Dashboard.css'
 
 export default function Home() {
     const [user, setUser] = useState(null)
