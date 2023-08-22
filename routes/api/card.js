@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/seed', async (req, res) => {
   try {
-    const response = await axios.get('https://api.pokemontcg.io/v2/cards', {
+    const response = await fetch('https://api.pokemontcg.io/v2/cards', {
       params: {
         q: 'your_query_here',
         pageSize: 10,
