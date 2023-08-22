@@ -12,7 +12,7 @@ export default function Dashboard() {
   useEffect(() => {
     pokemon.card.find(`base1-${card}`)
     .then(card => {
-        console.log(card.name)
+        console.log(card)
         setCardDetails(card);
     })
     }, [card]);
