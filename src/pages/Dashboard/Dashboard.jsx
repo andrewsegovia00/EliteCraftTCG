@@ -6,11 +6,11 @@ pokemon.configure({apiKey: import.meta.env.POKE_APIKEY})
 
 export default function Dashboard() {
   const [number, setNumber] = useState('');
-  const [card, setCard] = useState(4)
+  const [card, setCard] = useState(228)
   const [cardDetails, setCardDetails] = useState(null);
 
   useEffect(() => {
-    pokemon.card.find(`base1-${card}`)
+    pokemon.card.find(`sm12-${card}`)
     .then(card => {
         console.log(card)
         setCardDetails(card);
@@ -41,6 +41,8 @@ export default function Dashboard() {
                         <p>Name: {cardDetails.name}</p>
                         <p>Set: {cardDetails.set.name}</p>
                         <img src={cardDetails.images.small} />
+                        <img src={cardDetails.set.images.logo} />
+                        <img src={cardDetails.set.images.symbol} />
                     </div>
                 </>
             ) : (
