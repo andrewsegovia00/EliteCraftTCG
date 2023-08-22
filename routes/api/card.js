@@ -1,6 +1,6 @@
 const express = require('express');
 const Card = require('../../models/Card');
-const cardCtrl = require('../../controllers/api/card');
+const cardCtrl = require('../../controllers/api/Card');
 const router = express.Router();
 
 router.get('/seed', async (req, res) => {
