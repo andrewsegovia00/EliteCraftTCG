@@ -25,4 +25,4 @@ const deckSchema = new Schema({
   timestamps: true,
 });
 
-module.exports = mongoose.model('Deck', deckSchema);
+module.exports = mongoose.model('Set', deckSchema);

@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const deckSchema = new Schema({
   title: {type: String, required: true},
+
 //   comments: [],
 //   likes: [],
 }, {

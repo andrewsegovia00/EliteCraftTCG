@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
+const setSchema = require('./set');
 
-const setSchema = new mongoose.Schema({
-    name: String,
-    image: String,
-    
-})
 
 const cardSchema = new mongoose.Schema({
   name: String,
@@ -17,6 +13,5 @@ const cardSchema = new mongoose.Schema({
   }
 });
 
-const Card = mongoose.model('Card', cardSchema);
+module.exports = mongoose.model('Card', cardSchema);
 
-module.exports = Card;
