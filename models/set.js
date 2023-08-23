@@ -2,18 +2,25 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const deckSchema = new Schema({
-  name: {type: String, required: true},
-  email: {
+  name: {
+    type: String, 
+    required: true
+},
+  imageUrl: {
     type: String,
-    unique: true,
-    trim: true,
-    lowercase: true,
+    required: true
+}
+  ,
+  totalCards: {
+    type: String,
     required: true
   },
-  password: {
-    type: String,
-    required: true
-  }
+  legality: {
+    unlimited: String,
+    limited: String,
+    banned: String,
+  },
+
 }, {
   timestamps: true,
 });

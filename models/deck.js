@@ -3,13 +3,8 @@ const Schema = mongoose.Schema;
 
 const deckSchema = new Schema({
   title: {type: String, required: true},
-  email: {
-    type: String,
-    unique: true,
-    trim: true,
-    lowercase: true,
-    required: true
-  },
+//   comments: [],
+//   likes: [],
 }, {
   timestamps: true,
 });
