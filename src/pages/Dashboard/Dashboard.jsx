@@ -10,11 +10,22 @@ export default function Dashboard() {
   const [cardDetails, setCardDetails] = useState(null);
 
   useEffect(() => {
-    pokemon.card.find(`sm12-${card}`)
-    .then(card => {
-        console.log(card)
-        setCardDetails(card);
-    })
+    // pokemon.card.find(`sm12-${card}`)
+    // .then(card => {
+    //     console.log(card)
+    //     setCardDetails(card);
+    // })
+    // }, [card]);
+
+    pokemon.set.where({ q: 'series:base' })
+    .then(result => {
+      result.forEach(booster => {
+        console.log(booster.data);
+      });
+      if (result.length > 0) {
+        setCardDetails(result[0].data);
+      }
+    });  
     }, [card]);
   
     function handleSubmit(evt) {
@@ -38,9 +49,9 @@ export default function Dashboard() {
                 <>
                     <h2>Card Details</h2>
                     <div>
-                        <p>Name: {cardDetails.name}</p>
+                        {/* <p>Name: {cardDetails.name}</p>
                         <p>Set: {cardDetails.set.name}</p>
-                        <img src={cardDetails.images.small} />
+                        <img src={cardDetails.images.small} /> */}
                         <img src={cardDetails.set.images.logo} />
                         <img src={cardDetails.set.images.symbol} />
                     </div>
