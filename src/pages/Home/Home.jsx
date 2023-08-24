@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
+import Dashboard from '../Dashboard/Dashboard';
+import NavBar from '../../components/NavBar/NavBar';
 import './Home.css'
 
 export default function Home() {
@@ -12,10 +14,10 @@ export default function Home() {
       <main className="App">
         { user ?
             <>
-              {/* <NavBar user={user} setUser={setUser} /> */}
+              <NavBar user={user} setUser={setUser} />
               <Routes>
                 {/* Route components in here */}
-                {/* <Route path="/orders/new" element={<NewOrderPage />} /> */}
+                <Route path="/dashboard" element={<Dashboard />} />
                 {/* <Route path="/orders" element={<OrderHistoryPage />} /> */}
               </Routes>
             </>
