@@ -4,6 +4,7 @@ import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import Dashboard from '../Dashboard/Dashboard';
 import NavBar from '../../components/NavBar/NavBar';
+import pokemon from 'pokemontcgsdk'; 
 import './Home.css'
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
             :
             <AuthPage setUser={setUser} />
         }
+        z
       </main>
     );
   }

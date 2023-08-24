@@ -1,15 +1,29 @@
 const mongoose = require('mongoose');
-const setSchema = require('./set');
-
+// const setSchema = require('./set');
 
 const cardSchema = new mongoose.Schema({
-  name: String,
-  set: [setSchema],
-  imageUrl: String,
+  name: {
+    type: String
+  },
+  imageUrl: {
+    type: String
+  },
+  number: {
+    type: Number
+  },
+  set: {
+    type: String
+  },
+  typeImg: { 
+    type: String
+  },
   legality: {
+    standard: String,
+    expanded: String,
     unlimited: String,
-    limited: String,
-    banned: String,
+  },
+  set_id: { 
+    type: String
   }
 });
 

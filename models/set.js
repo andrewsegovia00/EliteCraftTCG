@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const cardSchema = require('./card');
 
-const deckSchema = new Schema({
+const setSchema = new Schema({
   name: {
     type: String, 
     required: true
@@ -9,20 +10,26 @@ const deckSchema = new Schema({
   imageUrl: {
     type: String,
     required: true
-}
-  ,
+},
   totalCards: {
     type: String,
     required: true
-  },
+},
   legality: {
+    standard: String,
+    expanded: String,
     unlimited: String,
-    limited: String,
-    banned: String,
-  },
+},
+  set_id: { 
+    type: String
+},
+  cards: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Card'
+}], 
 
 }, {
   timestamps: true,
 });
 
-module.exports = mongoose.model('Set', deckSchema);
+module.exports = mongoose.model('Set', setSchema);
