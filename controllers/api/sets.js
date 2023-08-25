@@ -1,18 +1,18 @@
-// const Set = require('../../models/set');
+const Set = require('../../models/set');
+const Card = require('../../models/card');
 
-// module.exports = {
-//   index,
-//   show
-// };
+module.exports = {
+  index,
+  show
+};
 
-// async function index(req, res) {
-//   const items = await Set.find({}).sort('name').populate('category').exec();
-//   // re-sort based upon the sortOrder of the populated categories
-//   items.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
-//   res.json(items);
-// }
+async function index(req, res) {
+  const sets = await Set.find({}).sort('name').exec();
+  res.json(sets);
+}
 
-// async function show(req, res) {
-//   const item = await Item.findById(req.params.id);
-//   res.json(item);
-// }
+async function show(req, res) {
+  const set = await Set.findById(req.params.id);
+  const cards = await Card.find(set.set_id);
+  res.json(set, cards);
+}

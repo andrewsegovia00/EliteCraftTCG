@@ -9,21 +9,25 @@ const pokemon = require('pokemontcgsdk');
 // IIFE
 (async function () {
   try {
-    const sets = await pokemon.set.all({ q: 'series:base' });
+    const sets = await pokemon.set.all({ q: 'series:Scarlet' });
     for (const set of sets) {
-      const createdSet = await Set.create({
-        name: set.name,
-        set_id: set.id,
-        imageUrl: set.images.logo,
-        totalCards: set.total,
-        legality: {
-          standard: set.legalities.standard ? 'Legal' : '',
-          expanded: set.legalities.expanded ? 'Legal' : '',
-          unlimited: set.legalities.unlimited ? 'Legal' : '',
-        },
-        cards: [],
-      });
-      for (let j = 0; j < set.total; j++) {
+        const createdSet = await Set.create({
+            name: set.name,
+            set_id: set.id,
+            imageUrl: set.images.logo,
+            totalCards: set.total,
+            legality: {
+                standard: set.legalities.standard ? 'Legal' : '',
+                expanded: set.legalities.expanded ? 'Legal' : '',
+                unlimited: set.legalities.unlimited ? 'Legal' : '',
+            },
+            cards: [],
+        });
+        for (let j = 0; j < set.total; j++) {
+            if(set.id === 'sv1')
+            {
+                j = 24;
+            }
         const cardData = await pokemon.card.find(`${set.id}-${j + 1}`);
         console.log(cardData)
         const createdCard = await Card.create({
@@ -43,14 +47,14 @@ const pokemon = require('pokemontcgsdk');
         createdSet.cards.push(createdCard._id);
 
         // Add a 2-second timeout after each card creation
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        // await new Promise(resolve => setTimeout(resolve, 1000));
       }
 
       await createdSet.save();
       console.log('Set and Cards created:', createdSet);
 
       // Add a 5-second timeout after each set iteration
-      await new Promise(resolve => setTimeout(resolve, 5000));
+    //   await new Promise(resolve => setTimeout(resolve, 5000));
     }
 
     console.log('Seeding completed successfully.');
