@@ -36,10 +36,9 @@ export default function CardList() {
     //   </ul>
     // </div>
     <div className="container">
+        <h1 className="is-size-4">{data.set.name}</h1>
       <div className="mb-4">
-        <strong className="is-size-4">{data.set.name}</strong>
-        <img src={`${data.set.imageUrl}`} />
-        {/* <small>({data.set.setCode})</small> */}
+        <img className='logoSet' src={`${data.set.imageUrl}`} />
       </div>
       <div className="gallery columns is-mobile">
         {data.cards.map((card) => (
