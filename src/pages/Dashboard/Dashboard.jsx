@@ -14,24 +14,6 @@ export default function Dashboard() {
     fetchSets();
   }, []);
   return (
-    // <div>
-    //   <h2>Booster Sets</h2>
-    //   <ul>
-    //     {sets.map((set) => (
-    //       <div key={set._id}>
-    //         <Link to={`/cardlist/${set._id}`}>
-    //           <h1>{set.name}</h1>
-    //           <img src={`${set.imageUrl}`} />
-    //           {/* <ul> */}
-    //             <ul>standard: {set.legality.standard}</ul>
-    //             <ul>expanded {set.legality.expanded}</ul>
-    //             <ul>unlimited {set.legality.unlimited}</ul>
-    //           {/* </ul> */}
-    //         </Link>
-    //       </div>
-    //     ))}
-    //   </ul>
-    // </div>
     <div className="setMainContainer">
       <h2>Booster Sets</h2>
       <div className="setContainer">
