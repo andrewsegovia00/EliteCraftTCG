@@ -1,0 +1,56 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    flex-grow: 1;
+    position: relative;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.is-size-4 {
+    font-size: 1.5rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columns {
+    display: flex;
+}
+
+.column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0.75rem;
+    flex: none;
+    width: calc(20% - 1em);
+    /* Adjust the width as needed */
+    transition: transform 0.3s;
+}
+
+.column:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    display: block;
+    position: relative;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.hvr-grow {
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
