@@ -1,4 +1,3 @@
-// App.js
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
@@ -24,29 +23,3 @@ export default function App() {
     </BrowserRouter>
   );
 }
-
-
-// import { useState } from 'react'
-// import { BrowserRouter, Route, Routes  } from 'react-router-dom';
-// // import CardList from "../CardList/CardList.jsx";
-// // import Dashboard from "../Dashboard/Dashboard.jsx"
-// // import Home from "../Home/Home"
-// import './App.css'
-// import NavBar from '../../components/NavBar/NavBar';
-
-// export default function App() {
-//   const [user, setUser] = useState(getUser());
-
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         <NavBar />
-//         <Home path="/" props={user}/>
-//         <Route path="/dashboard" element={<Dashboard />} />
-//         <Route path="/cardlist/:setId" element={<CardList />} />
-//       </Routes>
-//     </BrowserRouter>
-//   )
-// }
-
-

@@ -25,12 +25,11 @@ export default function Dashboard() {
               </div>
               <div className="card-content setText">
                 <p className="title is-4">{set.name}</p>
-                <p className="subtitle is-6">Released {set.releaseDate}</p>
                 <div className="content">
                   <ul>
-                    <li>Standard Legal</li>
-                    <li>Expanded Legal</li>
-                    <li>Unlimited Legal</li>
+                    <li>Standard: Legal</li>
+                    <li>Expanded: Legal</li>
+                    <li>Unlimited: Legal</li>
                   </ul>
                 </div>
               </div>
