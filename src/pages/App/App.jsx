@@ -5,6 +5,7 @@ import Home from '../Home/Home';
 import Dashboard from '../Dashboard/Dashboard';
 import CardList from '../CardList/CardList';
 import AuthPage from '../AuthPage/AuthPage';
+// import DeckBoard from '../DeckBoard/DeckBoard';
 import './App.css';
 import { getUser } from '../../utilities/users-service';
 
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cardlist/:setId" element={<CardList />} />
         <Route path="/login" element={<AuthPage setUser={setUser} />} />
+        {/* <Route path="/mydecks" element={<DeckBoard />}/> */}
       </Routes>
     </BrowserRouter>
   );

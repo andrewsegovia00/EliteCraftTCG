@@ -11,6 +11,10 @@ const deckSchema = new Schema({
       max: 3, 
     },
   ],
+  userId: {
+    type: Schema.Types.ObjectId, 
+    ref: 'User'
+  }
 }, {
   timestamps: true,
 });
