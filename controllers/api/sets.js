@@ -8,6 +8,7 @@ module.exports = {
 
 async function index(req, res) {
   const sets = await Set.find({}).sort('name').exec();
+  console.log('we are here sadly')
   res.json(sets);
 }
 
