@@ -14,23 +14,48 @@ export default function Dashboard() {
     fetchSets();
   }, []);
   return (
-    <div>
+    // <div>
+    //   <h2>Booster Sets</h2>
+    //   <ul>
+    //     {sets.map((set) => (
+    //       <div key={set._id}>
+    //         <Link to={`/cardlist/${set._id}`}>
+    //           <h1>{set.name}</h1>
+    //           <img src={`${set.imageUrl}`} />
+    //           {/* <ul> */}
+    //             <ul>standard: {set.legality.standard}</ul>
+    //             <ul>expanded {set.legality.expanded}</ul>
+    //             <ul>unlimited {set.legality.unlimited}</ul>
+    //           {/* </ul> */}
+    //         </Link>
+    //       </div>
+    //     ))}
+    //   </ul>
+    // </div>
+    <div className="setMainContainer">
       <h2>Booster Sets</h2>
-      <ul>
+      <div className="setContainer">
         {sets.map((set) => (
-          <div key={set._id}>
+          <div className="card" key={set._id}>
             <Link to={`/cardlist/${set._id}`}>
-              <h1>{set.name}</h1>
-              <img src={`${set.imageUrl}`} />
-              {/* <ul> */}
-                <ul>standard: {set.legality.standard}</ul>
-                <ul>expanded {set.legality.expanded}</ul>
-                <ul>unlimited {set.legality.unlimited}</ul>
-              {/* </ul> */}
+              <div className="card-image setLogo">
+                <img src={`${set.imageUrl}`} alt={set.name} />
+              </div>
+              <div className="card-content setText">
+                <p className="title is-4">{set.name}</p>
+                <p className="subtitle is-6">Released {set.releaseDate}</p>
+                <div className="content">
+                  <ul>
+                    <li>Standard Legal</li>
+                    <li>Expanded Legal</li>
+                    <li>Unlimited Legal</li>
+                  </ul>
+                </div>
+              </div>
             </Link>
           </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

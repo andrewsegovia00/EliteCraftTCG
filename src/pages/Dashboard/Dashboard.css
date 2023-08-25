@@ -1,0 +1,72 @@
+/* .setMainContainer {
+    display: flex;
+}
+
+.setContainer {}
+
+.setLogo {}
+
+.setText {} */
+
+/* YourStyles.css */
+
+.setMainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.setContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #252f3f;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+    color: #4a4a4a;
+    max-width: 100%;
+    position: relative;
+    flex: none;
+    width: calc(33.3333% - 1em);
+    /* Adjust the width as needed */
+    margin-bottom: 1em;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.setLogo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.setText {
+    text-align: center;
+}
+
+.setText .title {
+    margin-bottom: 0.5rem;
+}
+
+.setText .subtitle {
+    margin-bottom: 1rem;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Add any additional styles as needed */

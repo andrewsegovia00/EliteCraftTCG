@@ -9,7 +9,7 @@ const pokemon = require('pokemontcgsdk');
 // IIFE
 (async function () {
   try {
-    const sets = await pokemon.set.all({ q: 'series:Scarlet' });
+    const sets = await pokemon.set.all({ q: 'id:dp' });
     for (const set of sets) {
         const createdSet = await Set.create({
             name: set.name,
@@ -24,10 +24,7 @@ const pokemon = require('pokemontcgsdk');
             cards: [],
         });
         for (let j = 0; j < set.total; j++) {
-            if(set.id === 'sv1')
-            {
-                j = 24;
-            }
+
         const cardData = await pokemon.card.find(`${set.id}-${j + 1}`);
         console.log(cardData)
         const createdCard = await Card.create({
