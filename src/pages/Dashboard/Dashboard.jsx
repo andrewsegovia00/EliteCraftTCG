@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getAll as getAllSets } from '../../utilities/set';
+import { getAll as getAllSets } from '../../utilities/sets';
 // import pokemon from 'pokemontcgsdk'
 import './Dashboard.css';
 // pokemon.configure({apiKey: import.meta.env.POKE_APIKEY});
@@ -15,23 +15,22 @@ export default function Dashboard() {
     }
     fetchSets();
   }, []);
-  console.log(`Here is the updated sets ` + sets)
   return (
     <div>
       <h2>Booster Sets</h2>
       <ul>
         {sets.map((set) => (
-          <li key={set._id}>
+          <div key={set._id}>
             <Link to={`/sets/${set._id}`}>
+            <h1>{set.name}</h1>
               <img src={`${set.imageUrl}`} />
-              <p>{set.name}</p>
-              <ul>
-                <li>standard: {set.legality.standard}</li>
-                <li>expanded {set.legality.expanded}</li>
-                <li>unlimited {set.legality.unlimited}</li>
-              </ul>
+              {/* <ul> */}
+                <ul>standard: {set.legality.standard}</ul>
+                <ul>expanded {set.legality.expanded}</ul>
+                <ul>unlimited {set.legality.unlimited}</ul>
+              {/* </ul> */}
             </Link>
-          </li>
+          </div>
         ))}
       </ul>
     </div>

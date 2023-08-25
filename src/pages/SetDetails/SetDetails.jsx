@@ -1,30 +1,31 @@
+// Dashboard.jsx
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { getById as getSetById } from '../utilities/set'; // Import the utility function
+import { Link } from 'react-router-dom';
+import { getAll as getAllSets } from '../../utilities/set';
 
-function SetDetails() {
-  const { setId } = useParams();
-  const [set, setSet] = useState(null);
+function Dashboard() {
+  const [sets, setSets] = useState([]);
 
   useEffect(() => {
-    async function fetchSet() {
-      const setData = await getSetById(setId);
-      setSet(setData);
+    async function fetchSets() {
+      const setsData = await getAllSets();
+      setSets(setsData);
     }
-    fetchSet();
-  }, [setId]);
-
-  if (!set) {
-    return <p>Loading...</p>;
-  }
+    fetchSets();
+  }, []);
 
   return (
     <div>
-      <h2>Set Details</h2>
-      <p>Name: {set.name}</p>
-      {/* Display other set details */}
+      <h2>Booster Sets</h2>
+      <ul>
+        {sets.map((set) => (
+          <li key={set._id}>
+            <Link to={`/sets/${set._id}`}>{set.name}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
-export default SetDetails;
+export default Dashboard;
