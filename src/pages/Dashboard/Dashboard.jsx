@@ -13,10 +13,27 @@ export default function Dashboard() {
 
   useEffect(() => {
     // pokemon.card.find(`sm12-${card}`)
-    pokemon.set.all({ q: 'series:sv1' })
-    .then(card => {
-        console.log(card)
-        setCardDetails(card);
+    // pokemon.set.all({ q: 'series:sv1' })
+    // .then(card => {
+    //     console.log(card)
+    //     setCardDetails(card);
+    // })
+    // }, [card]);
+
+    //Query to seed all of the sets with
+    //id
+    //name
+    //total
+    //etc
+    // pokemon.set.all({ q: 'series:base' })
+    // .then((cards) => {
+    //     console.log(cards) // "Base"
+    // })
+    // }, [card]);
+
+    pokemon.card.all({ q: 'set.id:sm1' })
+    .then(result => {
+        console.log(result.data) // "Venusaur"
     })
     }, [card]);
 

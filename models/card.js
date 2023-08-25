@@ -14,9 +14,7 @@ const cardSchema = new mongoose.Schema({
   set: {
     type: String
   },
-  typeImg: { 
-    type: String
-  },
+  typeImg: [],
   legality: {
     standard: String,
     expanded: String,
