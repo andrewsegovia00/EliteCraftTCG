@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { getAll as getAllCardsBySetId } from '../../utilities/card';
+import { useParams } from 'react-router-dom';
+import { getAllCardsBySetId } from '../../utilities/cards';
 
-export default function CardList({ set }) {
-  const [cards, setCards] = useState([]);
+export default function CardList() {
+  const { setId } = useParams(); 
+  const [data, setData] = useState({ set: {}, cards: [] });
 
   useEffect(() => {
-    async function fetchCards() {
-      const cardsData = await getAllCardsBySetId(set.set_id);
-      setCards(cardsData);
+    async function fetchCardsBySetId() {
+      const cardsData = await getAllCardsBySetId(setId);
+      console.log(cardsData)
+      setData(cardsData);
     }
-    fetchCards();
-  }, [set]);
+    fetchCardsBySetId();
+  }, [setId]);
 
   return (
     <div>
+      <h1>{data.set.name}</h1>
+      <img src={`${data.set.imageUrl}`} />
       <h3>Cards in this Set:</h3>
       <ul>
-        {cards.map((card) => (
+        {data.cards.map((card) => (
           <div key={card._id}>
             <h1>{card.name}</h1>
             <img src={`${card.imageUrl}`} />
@@ -32,5 +37,3 @@ export default function CardList({ set }) {
     </div>
   );
 }
-
-// export default CardList;

@@ -1,19 +1,21 @@
 // import { useState } from 'react'
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes  } from 'react-router-dom';
+import CardList from "../CardList/CardList.jsx";
 import Dashboard from "../Dashboard/Dashboard.jsx"
 // import Home from "../Home/Home"
 import './App.css'
 
-function App() {
+export default function App() {
 
   return (
-    <>
-    <BrowserRouter> 
-      {/* <Home /> */}
-      <Dashboard />
+    <BrowserRouter>
+      <Routes>
+        {/* <Home /> */}
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/cardlist/:setId" element={<CardList />} />
+      </Routes>
     </BrowserRouter>
-    </>
   )
 }
 
-export default App
+
