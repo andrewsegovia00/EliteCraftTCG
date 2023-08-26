@@ -13,10 +13,19 @@ export default function DeckDetails() {
 
     return (
         <>
+        <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+            <Link to='/decks'>
+                <button style={{ marginTop: '2rem', marginLeft: 'auto' }}>
+                    Go Back
+                </button>
+            </Link>
+        </div>
+        <div>
             <h1>{user.name.toUpperCase()}'s {deck.title.toUpperCase()} Deck</h1>
             <div>Owner: {user.name}</div> 
             <div>Name of Deck: {deck.title}</div> 
             <div>Total Cards: {deck.totalCards}/60</div> 
+        </div>
         </>
     );
 }

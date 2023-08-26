@@ -14,19 +14,7 @@ export default function Home() {
 
     return (
       <main className="App">
-        {/* <NavBar user={user} setUser={setUser} /> */}
         <Hero />
-        {/* { user ?
-            <>
-              <Routes>
-                <Hero />
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/cardlist/:setId" element={<CardList />} />
-              </Routes>
-            </>
-            :
-            <AuthPage setUser={setUser} />
-        } */}
       </main>
     );
   }
