@@ -7,6 +7,7 @@ import CardList from '../CardList/CardList';
 import AuthPage from '../AuthPage/AuthPage';
 import DeckBoard from '../DeckBoard/DeckBoard';
 import NewDeck from '../../components/NewDeck/NewDeck';
+import DeckDetails from '../DeckDetails/DeckDetails';
 import './App.css';
 import { getUser } from '../../utilities/users-service';
 
@@ -24,6 +25,7 @@ export default function App() {
         {/* <Route path="/mydecks" element={<DeckBoard />}/> */}
         <Route path="/decks" element={<DeckBoard user={user} />} />
         <Route path="/decks/create" element={<NewDeck user={user} />} />
+        <Route path="/decks/detail/:deckId" element={<DeckDetails />} />
       </Routes>
     </BrowserRouter>
   );

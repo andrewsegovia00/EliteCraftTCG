@@ -9,14 +9,14 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
+      {user ? <span>{user.name}</span> : null}
+      &nbsp; &nbsp;
       <Link to="/" >Home</Link>
       &nbsp;  &nbsp;
-      <Link to="/dashboard">All Cards</Link>
+      <Link to="/dashboard">Sets</Link>
       &nbsp;  &nbsp;
       {user && <Link to="/decks" >My Decks</Link>}
       &nbsp;  &nbsp;
-      {user ? <span>Welcome, {user.name}</span> : null}
-      &nbsp; &nbsp;
       {user ? <Link to="" onClick={handleLogOut}>Log Out</Link> : <Link to="/login">Log In</Link>}
     </nav>
   );
