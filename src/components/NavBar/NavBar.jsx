@@ -13,7 +13,7 @@ export default function NavBar({ user, setUser }) {
       &nbsp;  &nbsp;
       <Link to="/dashboard">All Cards</Link>
       &nbsp;  &nbsp;
-      {user && <Link to="/mydecks" >My Decks</Link>}
+      {user && <Link to="/decks" >My Decks</Link>}
       &nbsp;  &nbsp;
       {user ? <span>Welcome, {user.name}</span> : null}
       &nbsp; &nbsp;
