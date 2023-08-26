@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.column1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+.column1 h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.column1 h3 {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.column2 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* Images styles go here */
+}
