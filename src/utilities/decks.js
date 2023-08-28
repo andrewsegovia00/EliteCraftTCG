@@ -12,10 +12,10 @@ export async function getAllDecksByUserId(userId) {
   return sendRequest(`${BASE_URL}/${userId}/`);
 }
 
-// export async function getOneDeckByUserId(userId, deckId) {
-//     console.log('3--we pass through here, in the utilities')
-//   return sendRequest(`${BASE_URL}/${userId}/${deckId}`);
-// }
+export async function getOneDeckByUserId(userId, deckId) {
+    console.log('3--we pass through here, in the utilities')
+  return sendRequest(`${BASE_URL}/${userId}/${deckId}`);
+}
 
 export async function createDeck(deckData) {
     console.log('4--we pass through here, in the utilities')

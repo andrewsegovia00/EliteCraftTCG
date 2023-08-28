@@ -33,8 +33,9 @@ const handleAddToDeck = async () => {
       await addCardToDeck(deckId, card._id);
         navigate('/decks')
     } catch (error) {
-      console.error('Error adding to deck:', error);
+        console.error('Error adding to deck:', error);
     }
+    navigate('/decks')
   };
 
   const openModal = () => {

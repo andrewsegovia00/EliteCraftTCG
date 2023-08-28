@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./DecksToAdd.css"
 
 export default function DecksToAdd({ decks, onClose, onSubmit, deckId, setDeckId }) {
-//   const [selectedDeckId, setSelectedDeckId] = useState('');
+    const navigate = useNavigate();
 
   const handleSelectChange = (event) => {
     setDeckId(event.target.value);
@@ -12,6 +13,7 @@ export default function DecksToAdd({ decks, onClose, onSubmit, deckId, setDeckId
     console.log('left modal')
     onSubmit(deckId);
     onClose();
+    navigate('/decks')
   };
 
   return (
