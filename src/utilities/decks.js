@@ -25,10 +25,12 @@ export async function createDeck(deckData) {
   }
   
 
-// export async function addCardsToDeck(deckId) {
-//     console.log('5--we pass through here, in the utilities')
-//   return sendRequest(`${BASE_URL}/${deckId}/addCard`);
-// }
+export async function addCardToDeck(deckId, cardId) {
+    console.log('5--we pass through here, in the utilities')
+    console.log(deckId, cardId)
+    const requestData = { deckId, cardId }
+  return sendRequest(`${BASE_URL}/${deckId}/addCard/${cardId}`, 'POST', requestData );
+}
 
 // export async function deleteCardsToDeck(deckId) {
 //     console.log('6--we pass through here, in the utilities')

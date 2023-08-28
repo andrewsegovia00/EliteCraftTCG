@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { getAllDecksByUserId as getAllDecks, deleteDeck } from '../../utilities/decks';
+import { getAllDecksByUserId as getAllUserDecks, deleteDeck } from '../../utilities/decks';
 
 import './DeckBoard.css';
 
@@ -10,7 +10,7 @@ export default function Dashboard({ user }) {
 
   useEffect(() => {
     async function fetchDecks() {
-      const deckData = await getAllDecks(user._id);
+      const deckData = await getAllUserDecks(user._id);
       console.log(deckData);
       setDecks(deckData);
     }

@@ -29,7 +29,7 @@ export default function CardList() {
             className="column is-half-mobile is-one-third-tablet is-one-fifth-desktop"
             key={card._id}
           >
-            <Link to={`/cardview/${card._id}`} state={{ card: card}}>
+            <Link to={`/cardview/${card._id}`} state={{ card: card, set: data.set}}>
               <img
                 className="card-image hvr-grow"
                 src={card.imageUrl}

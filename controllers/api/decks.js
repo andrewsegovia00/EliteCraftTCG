@@ -87,10 +87,17 @@ async function createDeck(req, res) {
 
 async function addCardsToDeck(req, res) {
   console.log('5--we pass through here, in the controllers')
-    const [cardId, deckId, userId] = req.body;
+  // console.log(req)
+  // console.log(req.body)
+  // console.log(req.user)
+
+    const {cardId, deckId} = req.body;
+    const userId = req.user._id;
     try {
-        const deck = await Deck.find(deckId && userId);
+      const deck = await Deck.findOne({ _id: deckId, userId: userId });
+        console.log(deck)
         deck.cards.push(cardId);
+        console.log(deck)
         await deck.save();
     } catch (err) {
         res.status(400).json(err);
