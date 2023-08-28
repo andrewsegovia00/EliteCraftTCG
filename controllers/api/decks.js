@@ -132,6 +132,7 @@ async function deleteDeck(req, res) {
 async function updateDeck(req, res) {
   console.log('we made it here but who knows: message')
   try {
+    const {deckId, title} = req.body;
     const deck = await Deck.findById(deckId);
     if (!deck) {
       return res.status(404).json({ message: 'Deck not found' });
