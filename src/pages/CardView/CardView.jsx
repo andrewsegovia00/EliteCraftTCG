@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Link } from 'react';
 import { useParams } from 'react-router-dom';
 import { getAllCardsBySetId } from '../../utilities/cards';
 import './CardList.css'
@@ -28,13 +28,13 @@ export default function CardList() {
             className="column is-half-mobile is-one-third-tablet is-one-fifth-desktop"
             key={card._id}
           >
-            {/* <a href={`/card/${card.slug}/${card.setCode}-${card.number}`}> */}
+            <Link href={`/card/${card.slug}/${card.setCode}-${card.number}`}>
               <img
                 className="card-image hvr-grow"
                 src={card.imageUrl}
                 alt={card.name}
               />
-            {/* </a> */}
+            </Link>
           </div>
         ))}
       </div>

@@ -12,10 +12,15 @@ export default function DeckDetails() {
 
     return (
         <>
-        <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between',  }}>
             <Link to='/decks'>
                 <button style={{ marginTop: '2rem', marginLeft: 'auto' }}>
                     Go Back
+                </button>
+            </Link>
+            <Link to='/dashboard'>
+                <button style={{ marginTop: '2rem', marginLeft: 'auto' }}>
+                    Add Cards
                 </button>
             </Link>
         </div>

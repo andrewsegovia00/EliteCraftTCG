@@ -9,6 +9,7 @@ import DeckBoard from '../DeckBoard/DeckBoard';
 import NewDeck from '../../components/NewDeck/NewDeck';
 import UpdateDeck from '../../components/UpdateDeck/UpdateDeck';
 import DeckDetails from '../DeckDetails/DeckDetails';
+import ViewCardDetails from '../../components/ViewCardDetails/ViewCardDetails';
 import './App.css';
 import { getUser } from '../../utilities/users-service';
 
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cardlist/:setId" element={<CardList />} />
+        <Route path="/cardview/:cardId" element={<ViewCardDetails user={user}/>} />
         <Route path="/login" element={<AuthPage setUser={setUser} />} />
         <Route path="/decks" element={<DeckBoard user={user} />} />
         <Route path="/decks/create" element={<NewDeck user={user} />} />
