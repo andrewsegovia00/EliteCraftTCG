@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate} from 'react-router-dom';
-// import { getAllDecksByUserId as getAllDecks, deleteDeck} from '../../utilities/decks';
 import './DeckDetails.css';
 import { useLocation } from 'react-router-dom';
 

@@ -7,7 +7,6 @@ module.exports = {
   getAllDecksByUserId,
   getOneDeckByUserId,
   createDeck,
-//   editContents,
   deleteDeck,
   addCardsToDeck,
   deleteCardsToDeck,
@@ -126,11 +125,6 @@ async function deleteDeck(req, res) {
 
 async function updateDeck(req, res) {
   console.log('we made it here but who knows: message')
-  // console.log(req)
-  // console.log(req.body)
-  const { deckId, title } = req.body;
-  //  console.log(deckId)
-  //  console.log(title)
   try {
     const deck = await Deck.findById(deckId);
     if (!deck) {

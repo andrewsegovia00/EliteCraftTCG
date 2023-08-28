@@ -23,7 +23,6 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cardlist/:setId" element={<CardList />} />
         <Route path="/login" element={<AuthPage setUser={setUser} />} />
-        {/* <Route path="/mydecks" element={<DeckBoard />}/> */}
         <Route path="/decks" element={<DeckBoard user={user} />} />
         <Route path="/decks/create" element={<NewDeck user={user} />} />
         <Route path="/decks/detail/:deckId" element={<DeckDetails />} />

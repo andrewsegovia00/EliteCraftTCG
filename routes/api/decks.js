@@ -1,15 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const decksCtrl = require('../../controllers/api/decks');
+const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 // router.get('/', decksCtrl.getAllDecks); 
-router.post('/create', decksCtrl.createDeck);
-router.get('/:userId', decksCtrl.getAllDecksByUserId);
+router.post('/create', ensureLoggedIn, decksCtrl.createDeck);
+router.get('/:userId', ensureLoggedIn, decksCtrl.getAllDecksByUserId);
 // router.post('/:deckId/addCard', decksCtrl.addCardsToDeck);
 // router.post('/:deckId/deleteCard', decksCtrl.deleteCardsToDeck);
-router.post('/delete/:deckId', decksCtrl.deleteDeck);
-router.post('/update/:deckId/', decksCtrl.updateDeck);
+router.post('/delete/:deckId', ensureLoggedIn, decksCtrl.deleteDeck);
+router.post('/update/:deckId/', ensureLoggedIn, decksCtrl.updateDeck);
 
-router.get('/:userId/:deckId', decksCtrl.getOneDeckByUserIdAndDeckId);
+router.get('/:userId/:deckId', ensureLoggedIn, decksCtrl.getOneDeckByUserIdAndDeckId);
 
 module.exports = router;
