@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
+import DecksToAdd from '../DecksToAdd/DecksToAdd';
 import { addCardToDeck, getAllDecksByUserId as getAllUserDecks } from '../../utilities/decks';
 import './ViewCardDetails.css'
-import DecksToAdd from '../DecksToAdd/DecksToAdd';
 
 export default function ViewCardDetails({user}) {
 const [isAddingToDeck, setIsAddingToDeck] = useState(false);

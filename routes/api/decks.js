@@ -5,12 +5,11 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 // router.get('/', decksCtrl.getAllDecks); 
 router.post('/create', ensureLoggedIn, decksCtrl.createDeck);
+// router.get('/one/:deckId', ensureLoggedIn, decksCtrl.getOneDeckByUserId);
 router.get('/:userId', ensureLoggedIn, decksCtrl.getAllDecksByUserId);
-router.post('/:deckId/addCard/:cardId', decksCtrl.addCardsToDeck);
+router.post('/:deckId/addCard/:cardId', ensureLoggedIn, decksCtrl.addCardsToDeck);
 // router.post('/:deckId/deleteCard', decksCtrl.deleteCardsToDeck);
 router.post('/delete/:deckId', ensureLoggedIn, decksCtrl.deleteDeck);
 router.post('/update/:deckId/', ensureLoggedIn, decksCtrl.updateDeck);
-
-router.get('/:userId/:deckId', ensureLoggedIn, decksCtrl.getOneDeckByUserIdAndDeckId);
 
 module.exports = router;

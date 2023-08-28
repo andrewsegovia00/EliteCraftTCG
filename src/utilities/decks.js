@@ -43,12 +43,14 @@ export async function deleteDeck(deckObj) {
   return sendRequest(`${BASE_URL}/delete/${deckObj.deckId}`, 'POST', deckObj);
 }
   
-export async function getOneDeckByUserId(userId, deckId) {
-    console.log('8--we pass through here, in the utilities')
-    console.log(userId)
-    console.log(deckId)
-  return sendRequest(`${BASE_URL}/${userId}/${deckId}`);
-}
+// export async function getOneDeckByUserId(deckId) {
+//     console.log('8--we pass through here, in the utilities')
+//     console.log('we are in the utilities file')
+//     // const requestData = {deckId}
+//     // deckId = {deckId} 
+//     console.log(deckId)
+//   return sendRequest(`${BASE_URL}/one/${deckId}`, deckId);
+// }
 
 export async function updateDeck(deckId, title) {
   console.log(deckId)

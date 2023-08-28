@@ -9,6 +9,7 @@ export default function CardList() {
 
   useEffect(() => {
     async function fetchCardsBySetId() {
+      console.log('we are in the front end')
       const cardsData = await getAllCardsBySetId(setId);
       console.log(cardsData)
       setData(cardsData);

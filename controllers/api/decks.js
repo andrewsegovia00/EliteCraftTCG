@@ -1,4 +1,4 @@
-// const Set = require('../../models/set');
+// const Cards = require('../../models/Card');
 const Deck = require('../../models/deck');
 
 module.exports = {
@@ -30,7 +30,7 @@ async function getOneDeckByUserIdAndDeckId(req, res) {
 async function getAllDecksByUserId(req, res) {
   console.log('1--we pass through here, in the controllers')
   try {
-      const decks = await Deck.find({ userId: req.user._id });
+      const decks = await Deck.find({ userId: req.user._id }).populate('cards');
       res.json(decks);
   } catch (error) {
       res.status(500).json({ message: 'Server error' });
@@ -38,12 +38,13 @@ async function getAllDecksByUserId(req, res) {
 }
 
 async function getOneDeckByUserId(req, res) {
-  console.log('510 message')
+  console.log('we are in the controller file')
+  console.log(req.body)
   try {
     const deck = await Deck.findOne({
-      _id: req.params.deckId,
-      userId: req.params.userId
-    });
+      _id: req.body.deckId,
+      userId: req.user._id
+    }).populate('cards');
     if (!deck) {
       return res.status(404).json({ message: 'Deck not found' });
     }
@@ -87,15 +88,13 @@ async function createDeck(req, res) {
 
 async function addCardsToDeck(req, res) {
   console.log('5--we pass through here, in the controllers')
-  // console.log(req)
-  // console.log(req.body)
-  // console.log(req.user)
 
     const {cardId, deckId} = req.body;
     const userId = req.user._id;
     try {
       const deck = await Deck.findOne({ _id: deckId, userId: userId });
         console.log(deck)
+        deck.totalCards += 1;
         deck.cards.push(cardId);
         console.log(deck)
         await deck.save();
