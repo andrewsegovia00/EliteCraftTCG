@@ -11,6 +11,7 @@ module.exports = {
   deleteDeck,
   addCardsToDeck,
   deleteCardsToDeck,
+  updateDeck,
 
 };
 
@@ -38,18 +39,16 @@ async function getAllDecksByUserId(req, res) {
 }
 
 async function getOneDeckByUserId(req, res) {
-  console.log('2--we pass through here, in the controllers')
+  console.log('510 message')
   try {
-    const decks = await Deck.findById(req.params.userId && req.params.deckId );
-    if (!decks) {
-      return res.status(404).json({ message: 'Set not found' });
+    const deck = await Deck.findOne({
+      _id: req.params.deckId,
+      userId: req.params.userId
+    });
+    if (!deck) {
+      return res.status(404).json({ message: 'Deck not found' });
     }
-
-    // const cards = await Card.find({ id: decks.cards.id }); 
-    // res.json({ set, cards });
-    // Is this necessary? Since Deck has a object reference to the cards, shouldn't 
-    // we just use that? We want to return the one deck with
-    // Information about the cards so we can populate them
+    res.json(deck);
   } catch (error) {
     res.status(500).json({ message: 'Server error' });
   }
@@ -124,4 +123,25 @@ async function deleteDeck(req, res) {
     res.status(400).json(err);
   }
 }
+
+async function updateDeck(req, res) {
+  console.log('we made it here but who knows: message')
+  // console.log(req)
+  // console.log(req.body)
+  const { deckId, title } = req.body;
+  //  console.log(deckId)
+  //  console.log(title)
+  try {
+    const deck = await Deck.findById(deckId);
+    if (!deck) {
+      return res.status(404).json({ message: 'Deck not found' });
+    }
+    deck.title = title;
+    await deck.save();
+    res.status(200).json({ message: 'Deck updated successfully' });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+}
+
 

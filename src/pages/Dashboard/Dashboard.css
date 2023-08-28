@@ -23,6 +23,13 @@
     justify-content: space-between;
 }
 
+.setsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    /* justify-content: space-between; */
+}
+
 .card {
     background-color: #252f3f;
     border-radius: 0.25rem;
