@@ -3,7 +3,7 @@ const router = express.Router();
 const decksCtrl = require('../../controllers/api/decks');
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
-// router.get('/', decksCtrl.getAllDecks); 
+router.get('/', decksCtrl.getAllDecks); 
 router.post('/create', ensureLoggedIn, decksCtrl.createDeck);
 router.get('/:userId', ensureLoggedIn, decksCtrl.getAllDecksByUserId);
 router.post('/:deckId/addCard/:cardId', ensureLoggedIn, decksCtrl.addCardsToDeck);

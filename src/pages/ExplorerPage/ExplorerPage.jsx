@@ -1,0 +1,44 @@
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { getAllDecks } from '../../utilities/decks';
+
+export default function Dashboard({ user }) {
+  // const navigate = useNavigate();
+  const [decks, setDecks] = useState([]);
+
+  useEffect(() => {
+    async function fetchDecks() {
+      const deckData = await getAllDecks();
+      console.log(deckData);
+      const deckDataArr = deckData.decks;
+      setDecks(deckDataArr);
+    }
+    fetchDecks();
+  }, []);
+
+  return (
+    <div className="setMainContainer">
+      {decks && (
+        <div className="decksMainContainer setsContainer">
+          {decks.map((deck) => (
+            <div className="card" key={deck._id}>
+              <div className="card-content setText">
+                <h2 style={{color: 'white', marginBottom: '1rem'}} className="title is-4 deckTitle">Name of Deck:{deck.title.toUpperCase()}</h2>
+                <h2 style={{color: 'white'}}>Total Cards: {deck.totalCards}/60</h2> 
+                <div className="content">
+                  <Link
+                    to={`/decks/detail/${deck._id}`}
+                    state={{ user: user, deck: deck }}
+                    className="button"
+                  >
+                    DETAILS
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

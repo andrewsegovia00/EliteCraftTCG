@@ -2,10 +2,10 @@ import sendRequest from './send-request';
 
 const BASE_URL = '/api/decks';
 
-// export async function getAllDecks() {
-//     console.log('1--we pass through here, in the utilities')
-//   return sendRequest(BASE_URL);
-// }
+export async function getAllDecks() {
+    console.log('1--we pass through here, in the utilities')
+  return sendRequest(BASE_URL);
+}
 
 export async function getAllDecksByUserId(userId) {
     console.log('2--we pass through here, in the utilities')

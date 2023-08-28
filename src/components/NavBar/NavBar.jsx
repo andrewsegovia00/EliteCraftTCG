@@ -9,10 +9,11 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      {user ? <span>{user.name}</span> : null}
-      &nbsp; &nbsp;
+      {/* {user ? <span>{user.name}</span> : null} */}
       <Link to="/" >Home</Link>
       &nbsp;  &nbsp;
+      <Link to="/explorer" >Explorer</Link>
+      &nbsp; &nbsp;
       <Link to="/dashboard">Sets</Link>
       &nbsp;  &nbsp;
       {user && <Link to="/decks" >My Decks</Link>}
