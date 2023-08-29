@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
 import './NavBar.css'
+import logo from '../../assets/pichuLogo.png'
 
 export default function NavBar({ user, setUser }) {
   function handleLogOut() {
@@ -9,32 +10,35 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <nav className="mainNav">
-      <div className="mainNavContainer">
-        <div className="left">
-          <Link to="/">Home</Link>
-        </div>
+  <nav className="mainNav">
+    <div className="mainNavContainer">
+      <div className="left">
+      <Link to="/" className="whiteLink">
+        <img src={logo} className="homeimg logo />
+        tcg elite crafting
+        </Link>
       </div>
-      <div className="mainNavLinks">
-        <div>
-          <Link to="/explorer">Explorer</Link>
-        </div>
-        <div>
-          <Link to="/dashboard">Sets</Link>
-        </div>
-        <div>
-          {user && <Link to="/decks">My Decks</Link>}
-        </div>
-        <div>
-          {user ? (
-            <Link to="" onClick={handleLogOut}>
-              Log Out
-            </Link>
-          ) : (
-            <Link to="/login">Log In</Link>
-          )}
-        </div>
+    </div>
+    <div className="mainNavLinks">
+      <div>
+        <Link to="/explorer" className="whiteLink">explorer</Link>
       </div>
-    </nav>
+      <div>
+        <Link to="/dashboard" className="whiteLink">sets</Link>
+      </div>
+      <div>
+        {user && <Link to="/decks" className="whiteLink">my Decks</Link>}
+      </div>
+      <div>
+        {user ? (
+          <Link to="" onClick={handleLogOut} className="whiteLink">
+            log Out
+          </Link>
+        ) : (
+          <Link to="/login" className="whiteLink">log In</Link>
+        )}
+      </div>
+    </div>
+  </nav>
   );
 }

@@ -16,7 +16,7 @@ export default function Hero() {
               <img src={cinderaceCard} className="card2 pokemonCard3" />
           </div>
           <div className="subText">Build your dream decks and share with the TCG community. Choose from a range of booster packs and get feedback from others on whether or not your deck is balanced or a match for the meta.</div>
-          <Link to={'/'} ><button className="Account">create account</button>
+          <Link to={'/login'} ><button className="Account">create account</button>
           </Link>
       </div>
     </>
