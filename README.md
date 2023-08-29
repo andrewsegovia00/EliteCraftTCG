@@ -7,7 +7,7 @@ Welcome to Elite Craft TCG, your ultimate Trading Card Game hub dedicated to Pok
 Take your TCG skills to the next level by crafting your very own decks, by combining cards that synergize to perfection. Share your creative decks with the community and discover decks curated by other users!
 
 Exciting Upcoming Features:
-Version 2.0: Engage with your favorite decks through comments and likes. Get better by hearing feedback from the community, and crafting decks to defeat the meta."
+Version 2.0: Engage with your favorite decks through comments and likes. Get better by hearing feedback from the community, and crafting decks to defeat the meta.
 
 
 ## Technologies Used:
