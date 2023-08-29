@@ -14,7 +14,7 @@ export default function NavBar({ user, setUser }) {
     <div className="mainNavContainer">
       <div className="left">
       <Link to="/" className="whiteLink">
-        <img src={logo} className="homeimg logo />
+        <img src={logo} className="homeimg logo" />
         tcg elite crafting
         </Link>
       </div>
