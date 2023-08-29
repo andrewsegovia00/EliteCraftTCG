@@ -57,7 +57,8 @@ async function getOneDeckByUserId(req, res) {
 async function getAllDecks(req, res) {
   console.log('3--we pass through here, in the controllers')
     try {    
-        const decks = await Deck.find({});
+      const decks = await Deck.find({}).populate('userId').populate('cards');
+      console.log(decks)
         res.json({ decks });
       } catch (error) {
         res.status(500).json({ message: 'Server error' });
