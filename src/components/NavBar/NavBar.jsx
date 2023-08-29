@@ -27,7 +27,7 @@ export default function NavBar({ user, setUser }) {
         <Link to="/dashboard" className="whiteLink">sets</Link>
       </div>
       <div>
-        {user && <Link to="/decks" className="whiteLink">my Decks</Link>}
+        {user && <Link to="/decks" className="whiteLink">my decks</Link>}
       </div>
       <div>
         {user ? (
