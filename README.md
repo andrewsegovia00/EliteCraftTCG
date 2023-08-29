@@ -1,16 +1,23 @@
-# Elite Craft TCG
+# :new: Elite Craft TCG
+### Final Capstone Project
 
 ## Description:
 
-Elite Craft TCG is an app that empowers travelers to budget and manage their expenses effortlessly. With a strong focus on forecasting and planning, Travel Bud provides a comprehensive platform to estimate trip costs and simulate budgets before you even set foot on your journey. Its intuitive design allows users to seamlessly track and categorize expenses while on the go, ensuring a smooth and stress-free travel experience. Whether you're a seasoned traveler or planning your first adventure, Travel Bud is your ultimate companion for smart and efficient budgeting.
+Welcome to Elite Craft TCG, your ultimate Trading Card Game hub dedicated to Pokemon enthusiasts! Dive into the exciting world of trading cards, where you can explore card lists from both current and past booster packs. But there's more to it than just exploring. 
+
+Take your TCG skills to the next level by crafting your very own decks, by combining cards that synergize to perfection. Share your creative decks with the community and discover decks curated by other users!
+
+Exciting Upcoming Features:
+Version 2.0: Engage with your favorite decks through comments and likes. Get better by hearing feedback from the community, and crafting decks to defeat the meta."
+
 
 ## Technologies Used:
 
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![Node.JS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![VScode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![JavaScript](https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![React](https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png) ![Node.Js](https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png) ![Vite](https://github.com/marwin1991/profile-technology-icons/assets/62091613/b40892ef-efb8-4b0e-a6b5-d1cfc2f3fc35) ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white) ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![VScode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
 ## Getting Started
 
-Here's a live link to get the fastest access to the app: [Live Link](https://travelbudgeting-tracker-0734a04974ea.herokuapp.com/)
+Here's a live link to get the fastest access to the app: [Live Link](https://tcgelitecraft-f9a09cc950a9.herokuapp.com/)
 
 Want to deploy it locally? No problem! Here's a guide:
 
