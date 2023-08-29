@@ -1,16 +1,20 @@
 .mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    /* background-color: #333; */
-    color: white;
+    background-color: #1a202c;
+    padding: 2rem 3rem 2rem 3rem;
+    z-index: 20;
 }
+
 
 .mainNavLinks {
     display: flex;
     gap: 20px;
-    /* Adjust the gap as needed */
 }
 
 .mainNavLinks>div {

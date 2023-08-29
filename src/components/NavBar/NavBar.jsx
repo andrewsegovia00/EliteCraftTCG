@@ -9,27 +9,6 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    // <nav>
-    //   <div className='mainNavContainer'> 
-    //     <div className='left'>
-    //       <Link to="/" >Home</Link>
-    //     </div>
-    //   </div>
-    //   <div>
-    //     <div>
-    //       <Link to="/explorer" >Explorer</Link>
-    //     </div>
-    //     <div>
-    //     <Link to="/dashboard">Sets</Link>
-    //     </div>
-    //     <div>
-    //     {user && <Link to="/decks" >My Decks</Link>}
-    //     </div>
-    //     <div>
-    //     {user ? <Link to="" onClick={handleLogOut}>Log Out</Link> : <Link to="/login">Log In</Link>}
-    //     </div>
-    //   </div>
-    // </nav>
     <nav className="mainNav">
       <div className="mainNavContainer">
         <div className="left">
@@ -57,6 +36,5 @@ export default function NavBar({ user, setUser }) {
         </div>
       </div>
     </nav>
-    // </>
   );
 }
