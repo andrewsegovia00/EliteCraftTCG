@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getAllDecks } from '../../utilities/decks';
+import './ExplorerPage.css'
 
 export default function Dashboard({ user }) {
   const [decks, setDecks] = useState([]);
@@ -16,7 +17,7 @@ export default function Dashboard({ user }) {
   }, []);
   
   return (
-    <div className="setMainContainer">
+    <div className="setMainContainer" style={{marginTop: '3rem'}}>
       {decks && (
         <div className="decksMainContainer setsContainer">
           {decks.map((deck) => (
