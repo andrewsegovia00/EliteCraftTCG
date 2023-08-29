@@ -81,10 +81,9 @@ This code snippet displays a modal pop-up for deleting a journey. Modals/PopUps 
 - [ ] Add search bar and filters to search for cards without the need of a set
 
 ## Below: The Wireframe of the App
-[Link for Trello Board](https://trello.com/b/GEMaqcaK/flight-tracker-app)
+[Link to Trello Board](https://trello.com/b/GEMaqcaK/flight-tracker-app)
 
 ## Wireframe 1
-/src/assets/screenshotsOfProject/cardList.png
 ![wireframe1](/src/assets/screenshotsOfProject/wireframe1.png)
 
 ## Wireframe 2
