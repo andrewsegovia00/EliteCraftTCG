@@ -2,11 +2,14 @@ import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
 import './NavBar.css'
 import logo from '../../assets/pichuLogo.png'
+import { useNavigate } from 'react-router-dom';
 
 export default function NavBar({ user, setUser }) {
+  const navigate = useNavigate()
   function handleLogOut() {
     userService.logOut();
     setUser(null);
+    navigate('/')
   }
 
   return (
@@ -27,15 +30,15 @@ export default function NavBar({ user, setUser }) {
         <Link to="/dashboard" className="whiteLink">sets</Link>
       </div>
       <div>
-        {user && <Link to="/decks" className="whiteLink">my decks</Link>}
+        {user ? <Link to="/decks" className="whiteLink">my decks</Link> : ''}
       </div>
       <div>
         {user ? (
           <Link to="" onClick={handleLogOut} className="whiteLink">
-            log Out
+            log out
           </Link>
         ) : (
-          <Link to="/login" className="whiteLink">log In</Link>
+          <Link to="/login" className="whiteLink">log in</Link>
         )}
       </div>
     </div>
