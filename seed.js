@@ -6,7 +6,6 @@ const Card = require('./models/card');
 
 const pokemon = require('pokemontcgsdk'); 
 
-// IIFE
 (async function () {
   try {
     const sets = await pokemon.set.all({ q: 'id:dp' });
@@ -26,7 +25,6 @@ const pokemon = require('pokemontcgsdk');
         for (let j = 0; j < set.total; j++) {
 
         const cardData = await pokemon.card.find(`${set.id}-${j + 1}`);
-        console.log(cardData)
         const createdCard = await Card.create({
           name: cardData.name ? cardData.name : 'unknown',
           imageUrl: cardData.images.large ? cardData.images.large : 'unknown',
@@ -46,7 +44,6 @@ const pokemon = require('pokemontcgsdk');
 
       await createdSet.save();
       console.log('Set and Cards created:', createdSet);
-
     }
 
     console.log('Seeding completed successfully.');
