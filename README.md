@@ -23,7 +23,7 @@ Want to see how it works by deploying it locally? Here's what you'll need to do:
 Fork or Clone the repository: Start by copying the project's GitHub repository link and run the following command:
 
 ```
-git clone https://github.com/your-username/EliteCraftTCG.git
+git clone https://github.com/andrewsegovia00/EliteCraftTCG.git
 ```
 
 Install Dependencies: Navigate to the project directory and install the required dependencies by running the following command:
@@ -50,17 +50,13 @@ Sign up and Get Started!
 ## App Screenshots:
 
 ### Below: Home Page View
-![A screenshot displaying the home page.](/public/images/homePage.png)
+![A screenshot displaying the home page.](/src/assets/screenshotsOfProject/home.png)
 
-### Below: Personal Trip Entries
-![A screenshot displaying the dashboard of your personal trip.](/public/images/personalTripView.png)
+### Below: Dashboard
+![A screenshot displaying the dashboard of available sets.](/src/assets/screenshotsOfProject/dashboard.png)
 
-### Below: Adding an Expense
-![A screenshot displaying the user flow to add an expense.](/public/images/addingExpense.png)
-
-### Below: Deleting a Journey
-![A screenshot showing the sad moment the user decides to delete a journey](/public/images/deletinJourney.png)
-
+### Below: Available Cards in a Set
+![A screenshot of available cards in a booster set.](/src/assets/screenshotsOfProject/cardList.png)
 
 ## Logic Behind Travel Bud
 ```ejs
@@ -79,22 +75,20 @@ Sign up and Get Started!
 This code snippet displays a modal pop-up for deleting a journey. Modals/PopUps that help the user are my favorite, expecially when there's a message stopping me from deleting an entry accidentally. The modal is starts as a hidden class, and an event listener queues the function that displays the moal. The form uses the POST method with a DELETE action, which allows the server to handle the deletion request when the user clicks the "Yes" button. The modal provides a warning message asking the user to confirm their intention before proceeding with the deletion. If the user clicks the "No" button, the modal is closed without any further action. The code snippet adds a layer of protection to avoid accidental deletions.
 
 ## Future Features / Icebox:
-- [ ] Add mobile-responsive design.
-- [ ] Add the ability to share your journeys and forecasted budgets with friends ad loved ones.
-- [ ] Request a travel API to populate the homepage with popular destination and more details about the location.
-- [ ] Add the ability to add another user to the same journey and share expenses and costs belonging to a user.
+- [ ] User is able to see what percentage of their deck is Trainer, Energy, or Pokemon cards.
+- [ ] Users are able to leave comments and like none-user-owned decks
+- [ ] Add the older Sets before Sword and Shield
+- [ ] Add search bar and filters to search for cards without the need of a set
 
 ## Below: The Wireframe of the App
 [Link for Trello Board](https://trello.com/b/GEMaqcaK/flight-tracker-app)
 
 ## Wireframe 1
-![wireframe1](/public/images/wireframe_1.png)
+/src/assets/screenshotsOfProject/cardList.png
+![wireframe1](/src/assets/screenshotsOfProject/wireframe1.png)
 
 ## Wireframe 2
-![wireframe1](/public/images/wireframe_2.png)
+![wireframe1](/src/assets/screenshotsOfProject/wireframe2.png)
 
 ## Wireframe 3
-![wireframe1](/public/images/wireframe_3.png)
-
-## Wireframe 4
-![wireframe1](/public/images/wireframe_4.png)
+![wireframe1](/src/assets/screenshotsOfProject/wireframe3.png)
