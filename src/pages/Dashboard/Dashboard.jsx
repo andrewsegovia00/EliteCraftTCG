@@ -15,7 +15,7 @@ export default function Dashboard() {
   }, []);
   return (
     <div className="setMainContainer">
-      <h2>Booster Sets</h2>
+      <h1>Booster Sets</h1>
       <div className="setContainer">
         {sets.map((set) => (
           <div className="card" key={set._id}>
@@ -24,12 +24,20 @@ export default function Dashboard() {
                 <img src={`${set.imageUrl}`} alt={set.name} />
               </div>
               <div className="card-content setText">
-                <p className="title is-4">{set.name}</p>
                 <div className="content">
-                  <ul>
-                    <li>Standard: Legal</li>
-                    <li>Expanded: Legal</li>
-                    <li>Unlimited: Legal</li>
+                  <ul >
+                    <li className='blocking'>
+                      <div className='header'>Standard</div>
+                      <div className='legal'>Legal</div>
+                    </li>
+                    <li className='blocking'>
+                    <div className='header'>Legal</div>
+                    <div className='legal'>Legal</div>
+                    </li>
+                    <li className='blocking'>
+                    <div className='header'>Legal</div>
+                    <div className='legal'> Legal</div>
+                    </li>
                   </ul>
                 </div>
               </div>

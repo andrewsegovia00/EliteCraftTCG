@@ -1,5 +1,4 @@
-# :new: Elite Craft TCG
-### Final Capstone Project
+# :new: Elite Craft TCG - (Final Capstone Project)
 
 ## Description:
 
@@ -13,18 +12,18 @@ Version 2.0: Engage with your favorite decks through comments and likes. Get bet
 
 ## Technologies Used:
 
-![JavaScript](https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![React](https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png) ![Node.Js](https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png) ![Vite](https://github.com/marwin1991/profile-technology-icons/assets/62091613/b40892ef-efb8-4b0e-a6b5-d1cfc2f3fc35) ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white) ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![VScode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Node.Js](	https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E) ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white) ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![VScode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
 ## Getting Started
 
-Here's a live link to get the fastest access to the app: [Live Link](https://tcgelitecraft-f9a09cc950a9.herokuapp.com/)
+Here's a live link to Elite Craft TCG: [Live Link](https://tcgelitecraft-f9a09cc950a9.herokuapp.com/)
 
-Want to deploy it locally? No problem! Here's a guide:
+Want to see how it works by deploying it locally? Here's what you'll need to do:
 
-Clone the repository: Start by cloning this GitHub repository to your local machine using the following command:
+Fork or Clone the repository: Start by copying the project's GitHub repository link and run the following command:
 
 ```
-git clone https://github.com/your-username/travel-bud.git
+git clone https://github.com/your-username/EliteCraftTCG.git
 ```
 
 Install Dependencies: Navigate to the project directory and install the required dependencies by running the following command:
@@ -37,21 +36,16 @@ Set up Environment Variables: Create a .env file in the root directory of the pr
 ```
 SECRET=your_secret_key
 MONGODB_URI=your_mongodb_uri
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_SECRET=your_google_secret
-GOOGLE_CALLBACK=your_google_callback_url
 ```
 
 Start the Server: Once the dependencies and environment variables are set up, start the server with the following command:
 
 ```
-npm start
+npm run dev
 ```
-Access the Application: Travel Bud should now be running on http://localhost:3000/. Open your web browser and visit this URL to access the application.
+Access the Application: Elite Craft TCG should now be running on http://localhost:5173/. Open your web browser and visit this URL to access the application.
 
-Sign In and Get Started: Travel Bud provides Google OAuth for user authentication. Click on the "LOG IN" button on the top-right corner of the navigation bar to sign in with your Google account. Once signed in, you can start creating and managing your travel budgets and expenses.
-
-Explore and Enjoy: Now you're all set to explore Travel Bud's features and enjoy a seamless and organized travel planning experience. Happy traveling!
+Sign up and Get Started!
 
 ## App Screenshots:
 

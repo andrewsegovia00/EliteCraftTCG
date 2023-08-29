@@ -39,10 +39,19 @@
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+    /* 
+    max-width: 22vw;
+    padding-top: 10px;
+    padding-bottom: 10px; */
 }
 
 .setText {
     text-align: center;
+}
+
+.setText ul {
+    list-style: none;
+    width: -webkit-fill-available;
 }
 
 .setText .title {
@@ -60,4 +69,26 @@
 
 .content li {
     margin-bottom: 0.5rem;
+}
+
+.blocking {
+    background-color: #52678a;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.header {
+    color: #E2E5F1;
+    font-weight: 100;
+    text-transform: capitalize;
+    font-size: .8rem;
+}
+
+.legal {
+    color: #FFFFFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }
