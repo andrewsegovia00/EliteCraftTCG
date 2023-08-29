@@ -14,9 +14,6 @@ const location = useLocation();
 const navigate = useNavigate();
 
 const { card, set } = location.state;
-// console.log(card)
-// console.log(user)
-// console.log(set)
 
 useEffect(() => {
     async function fetchDecks() {

@@ -11,7 +11,3 @@ router.post('/delete/:deckId', ensureLoggedIn, decksCtrl.deleteDeck);
 router.post('/update/:deckId/', ensureLoggedIn, decksCtrl.updateDeck);
 
 module.exports = router;
-
-
-// router.post('/:deckId/deleteCard', decksCtrl.deleteCardsToDeck);
-// router.get('/one/:deckId', ensureLoggedIn, decksCtrl.getOneDeckByUserId);

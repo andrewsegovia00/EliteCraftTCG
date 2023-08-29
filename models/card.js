@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// const setSchema = require('./set');
 
 const cardSchema = new mongoose.Schema({
   name: {

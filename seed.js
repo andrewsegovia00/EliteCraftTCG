@@ -42,16 +42,11 @@ const pokemon = require('pokemontcgsdk');
         });
 
         createdSet.cards.push(createdCard._id);
-
-        // Add a 2-second timeout after each card creation
-        // await new Promise(resolve => setTimeout(resolve, 1000));
       }
 
       await createdSet.save();
       console.log('Set and Cards created:', createdSet);
 
-      // Add a 5-second timeout after each set iteration
-    //   await new Promise(resolve => setTimeout(resolve, 5000));
     }
 
     console.log('Seeding completed successfully.');

@@ -14,7 +14,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use(require('./config/checkToken'));
-// const port = import.meta.env.PORT || 3001;
 const port = process.env.PORT || 3001;
 
 app.use('/api/decks', require('./routes/api/decks'));
