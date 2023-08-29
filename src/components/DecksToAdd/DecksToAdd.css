@@ -13,7 +13,16 @@
 .modal-content {
     background-color: #1a202c;
     padding: 2rem;
-    border-radius: 5px;
+    border-radius: 1.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 300px;
+}
+
+.modBtnCont {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.modBt {
+    width: auto;
 }

@@ -14,19 +14,9 @@ export default function DeckDetails() {
     return (
         <>
         <div className='ExpDetMainCont'>
-            {/* <div className='leftExp'>
-                    <Link to='/explorer'>
-                        <button style={{ marginTop: '0rem', marginLeft: 'auto' }}>
-                            Go Back
-                        </button>
-                    </Link>
-            <h1>{deck.userId.name.toUpperCase()}'s {deck.title.toUpperCase()} Deck</h1>
-            </div> */}
             <div className='headerExp'>
                 <Link to='/explorer'>
                 <button style={{fontSize: '2rem', borderRadius: '100%', padding: '.5rem 1rem .5rem 1rem'}}>
-                    {/* Go Back
-                     */}
                      ←
                 </button>
                 </Link>

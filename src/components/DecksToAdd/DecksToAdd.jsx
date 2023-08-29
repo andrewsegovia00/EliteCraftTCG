@@ -28,8 +28,10 @@ export default function DecksToAdd({ decks, onClose, onSubmit, deckId, setDeckId
             </option>
           ))}
         </select>
-        <button onClick={handleSubmit}>Add</button>
-        <button onClick={onClose}>Cancel</button>
+        <div className='modBtnCont'>
+          <button onClick={handleSubmit} className='modBt'>Add</button>
+          <button onClick={onClose} className='modBt'>Cancel</button>
+        </div>
       </div>
     </div>
   );

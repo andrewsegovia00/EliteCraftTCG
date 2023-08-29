@@ -26,7 +26,6 @@ useEffect(() => {
 
 const handleAddToDeck = async () => {
     try {
-        console.log('just left the cardDetails page')
       await addCardToDeck(deckId, card._id);
         navigate('/decks')
     } catch (error) {
@@ -46,16 +45,24 @@ const handleAddToDeck = async () => {
   };
 
   return (
-    <div className="container" style={{ alignItems: 'normal'}}>
-        <div style={{ display: 'flex', justifyContent: 'space-between'  }}>
-            <Link to={`/cardlist/${set._id}`}>
-                <button style={{ marginTop: '2rem', marginLeft: 'auto' }}>
-                    Go Back
-                </button>
-            </Link>
-            <form style={{display:'flex'}} onSubmit={handleAddToDeck}>
-            </form>
-        </div>
+      <div className="container" style={{ alignItems: 'normal' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
+        <Link to={`/cardlist/${set._id}`}>
+          <button className="same-height-button" >
+            Go Back
+          </button>
+        </Link>
+        <button
+          className="same-height-button"
+          type="submit"
+          disabled={isAddingToDeck}
+          onClick={openModal}
+        >
+          {isAddingToDeck ? 'Adding...' : 'Add to Deck'}
+        </button>
+        <form style={{ display: 'flex' }} onSubmit={handleAddToDeck}></form>
+      </div>
+
           <div 
             className="column is-half-mobile is-one-third-tablet is-one-fifth-desktop"
             style={{ padding: '0px', marginTop: '.8rem'}}
@@ -67,9 +74,6 @@ const handleAddToDeck = async () => {
                 alt={card.name}
               />
           </div>
-          <button type="submit" disabled={isAddingToDeck} onClick={openModal}>
-            {isAddingToDeck ? 'Adding...' : 'Add to Deck'}
-            </button>
             {showModal && (
                 <DecksToAdd
                 decks={decks}

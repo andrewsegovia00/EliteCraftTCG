@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { getAllDecksByUserId as getAllUserDecks, deleteDeck } from '../../utilities/decks';
-
 import './DeckBoard.css';
 
 export default function Dashboard({ user }) {
@@ -28,7 +27,7 @@ export default function Dashboard({ user }) {
   };
 
   return (
-    <div className="setMainContainer">
+    <div className="setMainContainer" style={{marginTop: '3rem'}}>
       <div className="right">
         <Link to={`/decks/create`}>
           <button style={{marginBottom: '2rem'}}>Create A New Deck</button>
@@ -40,7 +39,7 @@ export default function Dashboard({ user }) {
             <div className="card" key={deck._id}>
               <div className="card-content setText">
                 <h2 style={{color: 'white', marginBottom: '1rem'}} className="title is-4 deckTitle">Name of Deck:{deck.title.toUpperCase()}</h2>
-                <h2 style={{color: 'white'}}>Total Cards: {deck.totalCards}/60</h2> 
+                <h2 className="totalText">Total Cards: {deck.totalCards}/60</h2> 
                 <div className="content">
                   <Link
                     to={`/decks/detail/${deck._id}`}

@@ -1,0 +1,69 @@
+/* Add this to your existing CSS */
+
+.totalText {
+    color: white;
+}
+
+/* Responsive font size */
+.setMainContainer {
+    font-size: 18px;
+    /* Default font size */
+}
+
+@media (max-width: 950px) {
+    .deckTitle {
+        font-size: 16px;
+    }
+
+    .totalText {
+        font-size: 16px;
+    }
+}
+
+.card-content .content {
+    display: flex;
+    align-items: center;
+}
+
+.card-content .content .button {
+    margin: 0.25rem;
+}
+
+.setMainContainer {
+    padding: 20px 10px;
+}
+
+@media (max-width: 768px) {
+    .card-content .content .button {
+        width: 100%;
+    }
+}
+
+.card-content .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-content .content .button {
+    margin: 0.25rem;
+    min-width: 100px;
+    /* Set a minimum width for each button */
+}
+
+/* Media query for medium-sized screens */
+@media (max-width: 768px) {
+    .card-content .content .button {
+        flex-basis: calc(50% - 0.5rem);
+        /* 2 buttons in a row, with some spacing */
+    }
+}
+
+/* Media query for small screens */
+@media (max-width: 480px) {
+    .card-content .content .button {
+        flex-basis: 100%;
+        /* 1 button in a row, taking full width */
+    }
+}

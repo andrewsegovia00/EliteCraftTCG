@@ -18,8 +18,7 @@ export default function CardList() {
   }, [setId]);
 
   return (
-    <div className="container">
-        <h1 className="is-size-4">{data.set.name}</h1>
+    <div className="container" style={{marginTop: '3rem'}}>
       <div className="mb-4">
         <img className='logoSet' src={`${data.set.imageUrl}`} />
       </div>
