@@ -16,7 +16,7 @@ Version 2.0: Engage with your favorite decks through comments and likes. Get bet
 
 ## Getting Started
 
-Here's a live link to Elite Craft TCG: [Live Link](https://tcgelitecraft-f9a09cc950a9.herokuapp.com/)
+Here's a live link to Elite Craft TCG: [Live Link](https://tcgelitecraft-f9a09cc950a9.herokuapp.com/) - NO LONGER LIVE
 
 [Link to Trello Board](https://trello.com/b/GEMaqcaK/flight-tracker-app)
 
